@@ -1,0 +1,188 @@
+body {
+  font-size: 14px;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__menu {
+  display: none;
+}
+
+.hero, .top-news, .scores, .weather, .recent-news {
+  order: 10;
+}
+
+th[colspan="2"] + th {
+  text-align: left;
+}
+
+th:nth-of-type(3) {
+  text-align: right;
+}
+
+.recent-news {
+  max-width: 100%;
+}
+
+.snippet {
+  max-height: 81px;
+  overflow: hidden;
+}
+
+footer ul {
+  width: 450px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 389px) {
+  .hero .description {
+    height: 56%;
+  }
+}
+
+@media screen and (max-width: 464px) {
+  footer ul {
+    width: 350px;
+  }
+  footer li {
+    margin: 0;
+  }
+  footer a {
+    padding: 1em;
+  }
+}
+
+@media screen and (max-width: 549px) {
+  .header__logo {
+    height: 48px;
+    margin: 5px;
+  }
+  .header__title {
+    margin-left: 0;
+    font-size: 2em;
+    vertical-align: bottom;
+  }
+  .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    position: absolute;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+  .nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+  .header__menu {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding: 1em;
+  }
+  .header__menu svg {
+    width: 32px;
+    fill: #E0E0E0;
+  }
+  .scores {
+    width: 100%;
+    overflow-x: auto;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .header__logo {
+    margin: 20px 15px 15px 15px;
+  }
+  .header__title {
+    margin-left: 0px;
+  }
+  .hero {
+    order: 0;
+    width: 60%;
+  }
+  .weather {
+    order: 1;
+    width: 40%;
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 600px) {
+  .header__title {
+    font-size: 3.5em;
+  }
+  .header__logo {
+    margin-top: 15px; 
+  }
+}
+
+@media screen and (min-width: 550px) and (max-width: 650px) {
+  .hero .description {
+    height: 52%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 699px) {
+  .snippet__title {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .hero {
+    width: 50%;
+  }
+  .top-news {
+    order: 1;
+    width: 50%;
+  }
+  .scores {
+    order: 2;
+    width: 60%;
+  }
+  .weather {
+    order: 3;
+  }
+  .snippet {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .snippet__thumbnail {
+    width: 150px;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 780px) {
+  .scores {
+    width: 65%;
+  }
+  .weather {
+    width: 35%;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 780px) {
+  .hero .description {
+    height: 52%;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  main, .header__inner, .nav, .content {
+    width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
